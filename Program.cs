@@ -94,3 +94,33 @@
 //     }
 
 // It works, wow. First try)
+// Задача 7 HARD по желанию - идет за 2 необязательных 
+// Напишите программу, которая принимает на вход целое число любой разрядности и на выходе показывает третью цифру слева этого числа или говорит,
+// что такой цифры нет. Через строку решать нельзя.
+// 456111 -> 6
+// 78 -> нет
+// 9146548 -> 4
+// 3 -> нет
+
+
+//  int ThirdNum(int number)
+//     {
+//         int result = -1;
+//         if (number >= 100)
+//         {
+//             while (number > 999)
+//             {
+//             number = number / 10;
+//             }
+//             result = number % 10;
+//         }
+//         return result; 
+//     }
+ 
+// Console.WriteLine("Enter number: ");
+// int number1 = Convert.ToInt32(Console.ReadLine());
+ 
+// if (ThirdNum(number1) == -1)
+// Console.WriteLine("третьей цифры нет");
+// else
+// Console.WriteLine($"Third digit is {ThirdNum(number1)}");
