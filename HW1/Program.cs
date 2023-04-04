@@ -104,7 +104,7 @@
 
 
 //  int ThirdNum(int number)
-//     {
+//  {
 //         int result = -1;
 //         if (number >= 100)
 //         {
@@ -115,7 +115,7 @@
 //             result = number % 10;
 //         }
 //         return result; 
-//     }
+//  }
  
 // Console.WriteLine("Enter number: ");
 // int number1 = Convert.ToInt32(Console.ReadLine());
