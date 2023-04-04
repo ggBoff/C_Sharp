@@ -121,6 +121,6 @@
 // int number1 = Convert.ToInt32(Console.ReadLine());
  
 // if (ThirdNum(number1) == -1)
-// Console.WriteLine("третьей цифры нет");
+// Console.WriteLine("There is no 3d digit");
 // else
 // Console.WriteLine($"Third digit is {ThirdNum(number1)}");
