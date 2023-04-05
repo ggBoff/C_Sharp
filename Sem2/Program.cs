@@ -83,17 +83,91 @@
 
 //Enter numbers a and b   to check is a^2= b or n^2=a
 
-Console.WriteLine("Enter numbers a and b   to check is a^2= b or n^2=a");
+// Console.WriteLine("Enter numbers a and b   to check is a^2= b or n^2=a");
 
-Console.WriteLine("enter number a");
-int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("enter number a");
+// int num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("enter number b");
-int num2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("enter number b");
+// int num2 = Convert.ToInt32(Console.ReadLine());
 
-// Math.Abs - module; Math.Pow - vosvedenie v stepen'
+// // Math.Abs - module; Math.Pow - vosvedenie v stepen'
 
-if (Math.Abs(Math.Pow(num1,2)) == num2 || Math.Abs(Math.Pow(num2,2)) == num1)
-    Console.WriteLine("Yes");
+// if (Math.Abs(Math.Pow(num1,2)) == num2 || Math.Abs(Math.Pow(num2,2)) == num1)
+//     Console.WriteLine("Yes");
+// else 
+//     Console.WriteLine("No");
+
+
+// delete second digit of any number
+
+// variant WITHOUT USING STRING - why not 
+Console.WriteLine("Enter number");
+
+double num = Convert.ToDouble(Console.ReadLine());
+double count = 0;
+double numForCount = num;
+if (num >= 10)
+    {
+    while (numForCount > 1)
+    {
+        numForCount = numForCount / 10;
+        count++;
+    }
+    Console.WriteLine($"Count for / = {count}");
+        
+    int firstNum = Convert.ToInt32(num);
+    while (firstNum > 10 )
+        {
+            firstNum = firstNum / 10;
+        }
+    Console.WriteLine(firstNum);
+
+    int secondNum =Convert.ToInt32(num);
+    while (secondNum > 100 )
+        {
+            secondNum = secondNum / 10;
+        }
+    secondNum = secondNum - firstNum*10;
+    Console.WriteLine(secondNum);
+
+    double res = num;
+    while (res > 100)
+        {
+            res = res / 10;
+        }
+
+    int change = secondNum - firstNum;
+    res = Convert.ToDouble(res -(firstNum*10 + change));
+
+    res = res * (Math.Pow(10, (count-2)));
+    Console.WriteLine($"{num} with deleted 2d degit is {res}");
+    }
 else 
-    Console.WriteLine("No");
+    {   
+    int firstNum = Convert.ToInt32(num);
+    while (firstNum > 10 )
+        {
+            firstNum = firstNum / 10;
+        }
+    Console.WriteLine($"First num is {firstNum}");
+
+    int secondNum =Convert.ToInt32(num*10);
+    while (secondNum > 100 )
+        {
+            secondNum = secondNum / 10;
+        }
+    secondNum = (secondNum - firstNum*10);
+    Console.WriteLine($"Second num is {secondNum}");
+
+    double res = num;
+    
+    Console.WriteLine($"res ={res}");
+
+    int change = secondNum - firstNum;
+    Console.WriteLine($"Change = {change}");
+
+    res = Convert.ToDouble(res*10 -((firstNum*10 + change)));
+    Console.WriteLine($"{num} after deliting second digit ={res}");
+    }
+   
