@@ -47,9 +47,43 @@
     //________________________________________________________________________
     //________________________________________________________________________
 
-    // 12 Program wich make can we a/b without a tail  a=9, b = 3 -> 9 is "Kratno" 3 )))
+    // 12 Program wich make can we a/b without a tail  a=9, b = 3 -> 9 is multiple 3.
 
-Console.WriteLine("Enter numbers a and b   to check is a multiple b");
+// Console.WriteLine("Enter numbers a and b   to check is a multiple b");
+
+// Console.WriteLine("enter number a");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("enter number b");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// int result = num1 % num2;
+
+// if (result == 0)
+//     Console.WriteLine($"{num1} is multiple {num2}");
+// else
+//     Console.WriteLine($"{num1} is not multiple {num2}, remainder is {result}");
+//________________________________________________________________________
+//________________________________________________________________________
+// Write programm wich input number and check if it multiple 7 and 23
+
+
+// Console.WriteLine("Enter number");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+
+// if (num % 7 == 0 & num % 23 == 0)
+//     Console.WriteLine("Yes");
+// else 
+//     Console.WriteLine("No");
+
+    //________________________________________________________________________
+    //________________________________________________________________________
+
+
+//Enter numbers a and b   to check is a^2= b or n^2=a
+
+Console.WriteLine("Enter numbers a and b   to check is a^2= b or n^2=a");
 
 Console.WriteLine("enter number a");
 int num1 = Convert.ToInt32(Console.ReadLine());
@@ -57,9 +91,7 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("enter number b");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-int result = num1 % num2;
-
-if (result == 0)
-    Console.WriteLine($"{num1} is multiple {num2}");
-else
-    Console.WriteLine($"{num1} is not multiple {num2}, remainder is {result}");
+if (Math.Pow(num1,2) == num2 | Math.Pow(num2,2) == num1);
+    Console.WriteLine("Yes")
+else 
+    Console.WriteLine("No")
