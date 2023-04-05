@@ -22,4 +22,4 @@
 // Write a 3d digit number. program is deliting 2d digit of the number
 // example 321 -> 31
 
-int num =
+int num = Convert.ToInt32(Console.ReadLine());
