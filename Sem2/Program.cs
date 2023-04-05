@@ -91,7 +91,9 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("enter number b");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-if (Math.Pow(num1,2) == num2 | Math.Pow(num2,2) == num1);
-    Console.WriteLine("Yes")
+// Math.Abs - module; Math.Pow - vosvedenie v stepen'
+
+if (Math.Abs(Math.Pow(num1,2)) == num2 || Math.Abs(Math.Pow(num2,2)) == num1)
+    Console.WriteLine("Yes");
 else 
-    Console.WriteLine("No")
+    Console.WriteLine("No");
