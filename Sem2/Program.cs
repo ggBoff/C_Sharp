@@ -98,76 +98,100 @@
 // else 
 //     Console.WriteLine("No");
 
-
+//__________________________________________________________________________________________________________
+//__________________________________________________________________________________________________________
 // delete second digit of any number
 
+//__________________________________________________________________________________________________________
 // variant WITHOUT USING STRING - why not 
-Console.WriteLine("Enter number");
 
-double num = Convert.ToDouble(Console.ReadLine());
-double count = 0;
-double numForCount = num;
-if (num >= 10)
-    {
-    while (numForCount > 1)
-    {
-        numForCount = numForCount / 10;
-        count++;
-    }
-    Console.WriteLine($"Count for / = {count}");
+
+// Console.WriteLine("Enter number");
+
+// double num = Convert.ToDouble(Console.ReadLine());
+// double count = 0;
+// double numForCount = num;
+// if (num >= 10)
+//     {
+//     while (numForCount > 1)
+//     {
+//         numForCount = numForCount / 10;
+//         count++;
+//     }
+//     Console.WriteLine($"Count for / = {count}");
         
-    int firstNum = Convert.ToInt32(num);
-    while (firstNum > 10 )
-        {
-            firstNum = firstNum / 10;
-        }
-    Console.WriteLine(firstNum);
+//     int firstNum = Convert.ToInt32(num);
+//     while (firstNum > 10 )
+//         {
+//             firstNum = firstNum / 10;
+//         }
+//     Console.WriteLine(firstNum);
 
-    int secondNum =Convert.ToInt32(num);
-    while (secondNum > 100 )
-        {
-            secondNum = secondNum / 10;
-        }
-    secondNum = secondNum - firstNum*10;
-    Console.WriteLine(secondNum);
+//     int secondNum =Convert.ToInt32(num);
+//     while (secondNum > 100 )
+//         {
+//             secondNum = secondNum / 10;
+//         }
+//     secondNum = secondNum - firstNum*10;
+//     Console.WriteLine(secondNum);
 
-    double res = num;
-    while (res > 100)
-        {
-            res = res / 10;
-        }
+//     double res = num;
+//     while (res > 100)
+//         {
+//             res = res / 10;
+//         }
 
-    int change = secondNum - firstNum;
-    res = Convert.ToDouble(res -(firstNum*10 + change));
+//     int change = secondNum - firstNum;
+//     res = Convert.ToDouble(res -(firstNum*10 + change));
 
-    res = res * (Math.Pow(10, (count-2)));
-    Console.WriteLine($"{num} with deleted 2d degit is {res}");
-    }
-else 
-    {   
-    int firstNum = Convert.ToInt32(num);
-    while (firstNum > 10 )
-        {
-            firstNum = firstNum / 10;
-        }
-    Console.WriteLine($"First num is {firstNum}");
+//     res = res * (Math.Pow(10, (count-2)));
+//     Console.WriteLine($"{num} with deleted 2d degit is {res}");
+//     }
+// else 
+//     {   
+//     int firstNum = Convert.ToInt32(num);
+//     while (firstNum > 10 )
+//         {
+//             firstNum = firstNum / 10;
+//         }
+//     Console.WriteLine($"First num is {firstNum}");
 
-    int secondNum =Convert.ToInt32(num*10);
-    while (secondNum > 100 )
-        {
-            secondNum = secondNum / 10;
-        }
-    secondNum = (secondNum - firstNum*10);
-    Console.WriteLine($"Second num is {secondNum}");
+//     int secondNum =Convert.ToInt32(num*10);
+//     while (secondNum > 100 )
+//         {
+//             secondNum = secondNum / 10;
+//         }
+//     secondNum = (secondNum - firstNum*10);
+//     Console.WriteLine($"Second num is {secondNum}");
 
-    double res = num;
+//     double res = num;
     
-    Console.WriteLine($"res ={res}");
+//     Console.WriteLine($"res ={res}");
 
-    int change = secondNum - firstNum;
-    Console.WriteLine($"Change = {change}");
+//     int change = secondNum - firstNum;
+//     Console.WriteLine($"Change = {change}");
 
-    res = Convert.ToDouble(res*10 -((firstNum*10 + change)));
-    Console.WriteLine($"{num} after deliting second digit ={res}");
-    }
+//     res = Convert.ToDouble(res*10 -((firstNum*10 + change)));
+//     Console.WriteLine($"{num} after deliting second digit ={res}");
+//     }
    
+   //__________________________________________________________________________________________________________
+// 
+   double arc = Convert.ToDouble(Console.ReadLine());
+   string f1 = arc.ToString();
+   string result1 = "";
+    int i = 0;
+   for (i = 0; i < f1.Length; i++)
+   {
+    if (((f1[i] == '.') || (f1[i] == ',')) & (i == 1))
+        {
+            result1 += f1[i];
+            i = i + 1;
+            continue;
+        }
+    if (i != 1){
+        result1 += f1[i];
+    }
+   }
+    Console.WriteLine(result1);
+
